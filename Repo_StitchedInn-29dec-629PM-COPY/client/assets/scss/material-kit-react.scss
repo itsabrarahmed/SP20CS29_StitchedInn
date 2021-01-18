@@ -1,0 +1,178 @@
+/*!
+
+ =========================================================
+ * Material Kit React v1.9.0 based on Material Kit Free - v2.0.2 (Bootstrap 4.0.0 Final Edition)
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/material-kit-react
+ * Copyright 2020 Creative Tim (https://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/material-kit-react/blob/master/LICENSE.md)
+
+ * Coded by Creative Tim
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+@import "core/variables";
+@import "core/mixins";
+
+// Core Components
+@import "core/misc";
+
+// Core Plugins
+
+// @import "plugins/plugin-datetime-picker";
+@import "plugins/plugin-nouislider";
+@import "plugins/plugin-react-datetime";
+@import "plugins/plugin-react-slick";
+
+
+.ps-block--site-features {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 20px 40px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+
+    .ps-block__left {
+        i {
+            font-size: 40px;
+            color: $color-1st;
+        }
+    }
+
+    .ps-block__right {
+        padding-left: 25px;
+
+        h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-top: 0;
+            color: #000;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: $color-text;
+        }
+    }
+
+    .ps-block__item {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 10px 40px;
+        border-right: 1px solid #dadada;
+        max-width: 20%;
+        width: 100%;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+
+    &.ps-block--site-features-2 {
+        border: none;
+        padding: 0;
+
+        .ps-block__item {
+            max-width: 25%;
+            padding: 10px 30px;
+        }
+
+        @media (max-width: 1440px) {
+            .ps-block__item {
+                flex-flow: row nowrap;
+                border-right: 1px solid #dadada;
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+            .ps-block__left {
+                margin-bottom: 15px;
+            }
+            .ps-block__right {
+                width: 100%;
+                padding-left: 15px;
+            }
+        }
+        @include media('<md') {
+            .ps-block__item {
+                border-right: none;
+            }
+        }
+    }
+
+    @media (max-width: 1680px) {
+        padding: 30px;
+        .ps-block__item {
+            padding: 0 15px;
+        }
+    }
+
+    @media (max-width: 1440px) {
+        .ps-block__item {
+            flex-flow: row wrap;
+            border-right: none;
+        }
+        .ps-block__left {
+            margin-bottom: 15px;
+        }
+        .ps-block__right {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-flow: row wrap;
+        .ps-block__item {
+            margin-bottom: 30px;
+            max-width: 25%;
+            padding: 0;
+        }
+    }
+
+    @include media('<md') {
+        justify-content: flex-start;
+        .ps-block__item {
+            max-width: 50%;
+            max-width: 33.33333%;
+        }
+
+        &.ps-block--site-features-2 {
+            .ps-block__item {
+                max-width: 50%;
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        .ps-block__item {
+            max-width: 100%;
+            flex-flow: row nowrap;
+
+            .ps-block__right {
+                padding-left: 20px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.ps-block--site-features-2 {
+            .ps-block__item {
+                max-width: 100%;
+            }
+        }
+    }
+}
